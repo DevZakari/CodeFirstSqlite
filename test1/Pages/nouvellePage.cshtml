@@ -1,0 +1,42 @@
+﻿
+@page
+@model test1.Pages.nouvellePageModel
+@{
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ma Nouvelle Page</title>
+</head>
+<body>
+    <h1>Liste des étudiants</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Téléphone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var etudiant in Model.Etudiants)
+            {
+                <tr>
+                    <td>@etudiant.id</td>
+                    <td>@etudiant.firstN</td>
+                    <td>@etudiant.lastN</td>
+                    <td>@etudiant.email</td>
+                    <td>@etudiant.tel</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+ 
+</body>
+</html>
